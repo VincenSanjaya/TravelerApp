@@ -96,6 +96,7 @@ flutter:
       fonts:
          - asset: assets/font/Nuninto/Nunito-Regular.ttf
          - asset: assets/font/Nuninto/Nunito-Bold.ttf
+         - asset: assets/font/Nuninto/Nunito-ExtraBold.ttf
          - asset: assets/font/Nuninto/Nunito-Italic.ttf
            style: italic
 

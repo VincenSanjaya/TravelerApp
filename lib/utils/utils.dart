@@ -20,3 +20,5 @@ class AppLayout {
     return getScreenHeight()/x;
   }
 }
+
+const kAnimationDuration = Duration(milliseconds: 200);
