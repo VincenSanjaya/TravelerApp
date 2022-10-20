@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Nuninto',
         primarySwatch: Colors.blue,
       ),
-      home: OnBoardingScreen(),
+
     );
   }
 }
