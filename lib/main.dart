@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:flutter_traveler_app/screens/onboarding-screen/onboarding-screen.dart';
-import 'package:flutter_traveler_app/screens/register-screen/register-screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +19,6 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Nuninto',
         primarySwatch: Colors.blue,
       ),
-      home: RegisterScren(),
     );
   }
 }
