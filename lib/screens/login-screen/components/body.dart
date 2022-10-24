@@ -105,8 +105,8 @@ class _BodyLoginState extends State<BodyLogin> {
                 SizedBox(height: 5,),
 
                 TextField(
-                  obscureText: false,
-                  keyboardType: TextInputType.emailAddress,
+                  obscureText: true,
+                  keyboardType: TextInputType.text,
                   cursorColor: Styles.primaryColor,
                   style: TextStyle(color: Styles.black, fontWeight: FontWeight.w600),
                   decoration: InputDecoration(
