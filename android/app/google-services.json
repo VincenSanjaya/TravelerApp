@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "913052793365",
+    "project_id": "traverlerapp",
+    "storage_bucket": "traverlerapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:913052793365:android:a67b6717e3ebe9e1626c1c",
+        "android_client_info": {
+          "package_name": "com.example.flutter_traveler_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "913052793365-qkujgi2mjgb7p6h21c8pv4boqeubmrqd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNKyBLMxqXOY9oVutleDbz5JFDSUwlAiU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "913052793365-qkujgi2mjgb7p6h21c8pv4boqeubmrqd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
