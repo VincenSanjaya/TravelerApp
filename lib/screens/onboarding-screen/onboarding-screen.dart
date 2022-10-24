@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_traveler_app/screens/loginorregister-screen/choose-screen.dart';
 import 'package:flutter_traveler_app/screens/loginorregister-screen/components/body.dart';
 import 'package:flutter_traveler_app/utils/constant.dart';
 import 'package:flutter_traveler_app/utils/utils.dart';
+import 'package:flutter_traveler_app/utils/routes.dart';
 
 import 'components/onboarding-content.dart';
 
@@ -63,7 +65,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                   children: [
                     TextButton(
                       onPressed: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context) => BodyChoose()));
+                        Navigator.pushNamed(context, ChooseScreen.routeName);
                       },
                       child: Text(
                         "Mulai!",
