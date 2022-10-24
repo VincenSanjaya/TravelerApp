@@ -23,9 +23,6 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Nuninto',
         primaryColor: Styles.primaryColor,
       ),
-      home: const OnBoardingScreen(),
-        initialRoute: OnBoardingScreen.routeName,
-        routes: routes
     );
   }
 }

@@ -45,6 +45,8 @@ dependencies:
   rflutter_alert: ^2.0.2
   flutter_native_splash: ^2.2.11
   image_picker:
+  material_design_icons_flutter: ^5.0.6996
+  font_awesome_flutter: ^10.2.1
 
 dev_dependencies:
   flutter_test:
