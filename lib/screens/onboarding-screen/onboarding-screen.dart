@@ -6,6 +6,7 @@ import 'package:flutter_traveler_app/utils/utils.dart';
 import 'components/onboarding-content.dart';
 
 class OnBoardingScreen extends StatefulWidget {
+  static String routeName = "/onboard";
   const OnBoardingScreen({
     Key? key,
   }) : super(key: key);
@@ -15,6 +16,7 @@ class OnBoardingScreen extends StatefulWidget {
 }
 
 class _OnBoardingScreenState extends State<OnBoardingScreen> {
+
   late PageController _pageController;
   int _pageIndex = 0;
   bool isLastPage = false;

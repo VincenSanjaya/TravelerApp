@@ -3,6 +3,7 @@ import 'package:flutter_traveler_app/screens/login-screen/components/body.dart';
 
 
 class LoginScreen extends StatefulWidget {
+  static String routeName = "/loginscreen";
   const LoginScreen({Key? key}) : super(key: key);
 
   @override
