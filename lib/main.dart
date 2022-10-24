@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
+import 'package:flutter_traveler_app/screens/login-screen/components/body.dart';
+import 'package:flutter_traveler_app/screens/login-screen/login-screen.dart';
 import 'package:flutter_traveler_app/screens/onboarding-screen/onboarding-screen.dart';
+import 'package:flutter_traveler_app/utils/constant.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,9 +20,9 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         fontFamily: 'Nuninto',
-        primarySwatch: Colors.blue,
+        primaryColor: Styles.primaryColor,
       ),
-      home: const OnBoardingScreen(),
+      home: const LoginScreen(),
     );
   }
 }
