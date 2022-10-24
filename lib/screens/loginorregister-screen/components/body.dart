@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_traveler_app/screens/login-screen/login-screen.dart';
 import 'package:flutter_traveler_app/utils/constant.dart';
 import 'package:flutter_traveler_app/utils/utils.dart';
 
@@ -90,7 +91,7 @@ class _BodyChooseState extends State<BodyChoose> {
                           ),
                         child: TextButton(
                           onPressed: () {
-
+                            Navigator.pushNamed(context, LoginScreen.routeName);
                           },
                           child: Text(
                             "Sign In",
