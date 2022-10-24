@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_traveler_app/screens/loginorregister-screen/choose-screen.dart';
 import 'package:flutter_traveler_app/screens/loginorregister-screen/components/body.dart';
 import 'package:flutter_traveler_app/utils/constant.dart';
 import 'package:flutter_traveler_app/utils/utils.dart';
+import 'package:flutter_traveler_app/utils/routes.dart';
 
 import 'components/onboarding-content.dart';
 
 class OnBoardingScreen extends StatefulWidget {
+  static String routeName = "/onboard";
   const OnBoardingScreen({
     Key? key,
   }) : super(key: key);
@@ -15,6 +18,7 @@ class OnBoardingScreen extends StatefulWidget {
 }
 
 class _OnBoardingScreenState extends State<OnBoardingScreen> {
+
   late PageController _pageController;
   int _pageIndex = 0;
   bool isLastPage = false;
@@ -61,7 +65,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                   children: [
                     TextButton(
                       onPressed: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context) => BodyChoose()));
+                        Navigator.pushNamed(context, ChooseScreen.routeName);
                       },
                       child: Text(
                         "Mulai!",
