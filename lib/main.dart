@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
+import 'package:flutter_traveler_app/screens/home-screen/home-screen.dart';
 import 'package:flutter_traveler_app/screens/login-screen/components/body.dart';
 import 'package:flutter_traveler_app/screens/login-screen/login-screen.dart';
 import 'package:flutter_traveler_app/screens/onboarding-screen/onboarding-screen.dart';
@@ -23,9 +24,10 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Nuninto',
         primaryColor: Styles.primaryColor,
       ),
-      home: const OnBoardingScreen(),
-      initialRoute: OnBoardingScreen.routeName,
-      routes: routes,
+      home: HomeScreen(),
+      // home: const OnBoardingScreen(),
+      // initialRoute: OnBoardingScreen.routeName,
+      // routes: routes,
 
     );
   }
