@@ -4,6 +4,7 @@ import 'package:flutter_traveler_app/screens/home-screen/home-screen.dart';
 import 'package:flutter_traveler_app/screens/login-screen/components/body.dart';
 import 'package:flutter_traveler_app/screens/login-screen/login-screen.dart';
 import 'package:flutter_traveler_app/screens/onboarding-screen/onboarding-screen.dart';
+import 'package:flutter_traveler_app/screens/profile-screen/profile-screen.dart';
 import 'package:flutter_traveler_app/utils/constant.dart';
 import 'package:flutter_traveler_app/utils/routes.dart';
 
@@ -24,10 +25,9 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Nuninto',
         primaryColor: Styles.primaryColor,
       ),
-      home: HomeScreen(),
-      // home: const OnBoardingScreen(),
-      // initialRoute: OnBoardingScreen.routeName,
-      // routes: routes,
+      home: const OnBoardingScreen(),
+      initialRoute: OnBoardingScreen.routeName,
+      routes: routes,
 
     );
   }
