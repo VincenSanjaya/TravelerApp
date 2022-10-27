@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_traveler_app/utils/auth_service.dart';
 import 'package:flutter_traveler_app/utils/constant.dart';
 import 'package:flutter_traveler_app/utils/utils.dart';
 import 'package:get/get.dart';
@@ -33,7 +34,13 @@ class _BodyLoginState extends State<BodyLogin> {
             margin: EdgeInsets.only(top: 50),
             child: Row(
               children: <Widget> [
-                ElevatedButton(onPressed: () {},
+                ElevatedButton(onPressed: () {
+                  AuthService().signInWithGoogle().then((result) {
+                    if (result != null) {
+                      Get.offAllNamed("/home");
+                    }
+                  });
+                },
                   style: ButtonStyle(
                     backgroundColor: MaterialStateColor.resolveWith((states) => Styles.darkerPrimary),
                     shape: MaterialStateProperty.all<RoundedRectangleBorder>(
