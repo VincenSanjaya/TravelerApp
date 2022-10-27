@@ -39,6 +39,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   firebase_auth:
   google_sign_in:
+  firebase_core:
+  flutter_bloc:
   get:
   http:
   sqflite:
