@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_traveler_app/screens/notification-screen/notification-screen.dart';
 import 'package:flutter_traveler_app/utils/constant.dart';
 import 'package:flutter_traveler_app/utils/utils.dart';
 
@@ -41,7 +42,7 @@ class Searchbar extends StatelessWidget {
                         color: Styles.white,
                       ),
                       onPressed: () {
-
+                        Navigator.pushNamed(context, NotificationScreen.routeName);
                       },
                     ),
                   )
