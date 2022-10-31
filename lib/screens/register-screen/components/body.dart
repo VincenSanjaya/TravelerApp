@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_traveler_app/components/bottom-navigation.dart';
+import 'package:flutter_traveler_app/screens/home-screen/home-screen.dart';
+import 'package:flutter_traveler_app/screens/login-screen/login-screen.dart';
 import 'package:flutter_traveler_app/utils/constant.dart';
 import 'package:flutter_traveler_app/utils/utils.dart';
 import 'package:get/get.dart';
@@ -204,7 +207,9 @@ class _BodyRegisterState extends State<BodyRegister> {
           Container(
             margin: EdgeInsets.only(top: 50),
             child: ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(context, BottomBar.routeName);
+              },
               style: ButtonStyle(
                 backgroundColor: MaterialStateColor.resolveWith(
                     (states) => Styles.primaryColor),
@@ -241,6 +246,9 @@ class _BodyRegisterState extends State<BodyRegister> {
                 width: 5,
               ),
               GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, LoginScreen.routeName);
+                },
                 child: Text(
                   "Masuk",
                   style: TextStyle(

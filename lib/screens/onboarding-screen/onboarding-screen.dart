@@ -18,7 +18,6 @@ class OnBoardingScreen extends StatefulWidget {
 }
 
 class _OnBoardingScreenState extends State<OnBoardingScreen> {
-
   late PageController _pageController;
   int _pageIndex = 0;
   bool isLastPage = false;
@@ -58,62 +57,60 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                   )),
         ),
         Container(
-          padding: EdgeInsets.symmetric(horizontal: 20),
           child: isLastPage
-              ? Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    TextButton(
-                      onPressed: () {
-                        Navigator.pushNamed(context, ChooseScreen.routeName);
-                      },
-                      child: Text(
-                        "Mulai!",
-                        style: TextStyle(
-                            color: Styles.primaryColor,
-                            fontSize: 40,
-                            fontWeight: FontWeight.bold),
-                      ),
-                      // style: ButtonStyle(
-                      //     backgroundColor:
-                      //         MaterialStateProperty.all(Styles.primaryColor),
-                      //     shape:
-                      //         MaterialStateProperty.all<RoundedRectangleBorder>(
-                      //             RoundedRectangleBorder(
-                      //       borderRadius: BorderRadius.circular(20.0),
-                      //     ))),
-                    )
-                  ],
-                )
-              : Row(
-                  children: [
-                    ...List.generate(
-                        demo_data.length,
-                        (index) => Padding(
-                              padding: EdgeInsets.only(right: 4),
-                              child:
-                                  DotIndicator(isActive: index == _pageIndex),
-                            )),
-                    const Spacer(),
-                    SizedBox(
-                      height: 60,
-                      width: 60,
-                      child: TextButton(
+              ? Container(
+                  decoration: BoxDecoration(
+                      color: Styles.primaryColor,),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      TextButton(
                         onPressed: () {
-                          _pageController.nextPage(
-                              duration: const Duration(milliseconds: 800),
-                              curve: Curves.ease);
+                          Navigator.pushNamed(context, ChooseScreen.routeName);
                         },
                         child: Text(
-                          "Next",
+                          "Mulai!",
                           style: TextStyle(
-                              color: Styles.primaryColor,
-                              fontSize: 18,
-                              fontWeight: FontWeight.w800),
+                              color: Styles.white,
+                              fontSize: 44.3,
+                              fontWeight: FontWeight.bold),
+                        ),
+                      )
+                    ],
+                  ),
+                )
+              : Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 20),
+                  child: Row(
+                    children: [
+                      ...List.generate(
+                          demo_data.length,
+                          (index) => Padding(
+                                padding: EdgeInsets.only(right: 4),
+                                child:
+                                    DotIndicator(isActive: index == _pageIndex),
+                              )),
+                      const Spacer(),
+                      SizedBox(
+                        height: 60,
+                        width: 60,
+                        child: TextButton(
+                          onPressed: () {
+                            _pageController.nextPage(
+                                duration: const Duration(milliseconds: 900),
+                                curve: Curves.ease);
+                          },
+                          child: Text(
+                            "Next",
+                            style: TextStyle(
+                                color: Styles.primaryColor,
+                                fontSize: 18,
+                                fontWeight: FontWeight.w800),
+                          ),
                         ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
         ),
       ],

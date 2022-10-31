@@ -22,3 +22,5 @@ class AppLayout {
 }
 
 const kAnimationDuration = Duration(milliseconds: 200);
+const double kDefaultPadding = 20.0;
+

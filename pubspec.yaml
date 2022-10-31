@@ -39,9 +39,10 @@ dependencies:
   cupertino_icons: ^1.0.2
   firebase_auth:
   google_sign_in:
-  firebase_core:
   flutter_bloc:
+  fluentui_icons: ^1.0.0
   get:
+  gap: ^2.0.0
   http:
   sqflite:
   url_launcher: ^6.1.5
@@ -51,6 +52,7 @@ dependencies:
   material_design_icons_flutter: ^5.0.6996
   font_awesome_flutter: ^10.2.1
   cloud_firestore: ^4.0.2
+  carousel_slider: ^4.1.1
 
 dev_dependencies:
   flutter_test:
