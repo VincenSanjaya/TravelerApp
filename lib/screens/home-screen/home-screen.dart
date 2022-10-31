@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_traveler_app/components/bottom-navigation.dart';
 import 'package:flutter_traveler_app/screens/home-screen/components/body.dart';
 
 class HomeScreen extends StatefulWidget {
