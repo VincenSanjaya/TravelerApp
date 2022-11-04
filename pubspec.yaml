@@ -44,15 +44,14 @@ dependencies:
   get:
   gap: ^2.0.0
   http:
+  dropdown_textfield: ^1.0.6
   sqflite:
-  url_launcher: ^6.1.5
-  rflutter_alert: ^2.0.2
   flutter_native_splash: ^2.2.11
-  image_picker:
   material_design_icons_flutter: ^5.0.6996
   font_awesome_flutter: ^10.2.1
   cloud_firestore: ^4.0.2
   carousel_slider: ^4.1.1
+  syncfusion_flutter_datepicker: ^20.3.52
 
 dev_dependencies:
   flutter_test:

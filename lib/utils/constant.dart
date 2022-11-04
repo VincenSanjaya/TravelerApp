@@ -7,6 +7,8 @@ class Styles {
   static Color primaryColor = primary;
   static Color white = const Color(0xFFFAF9F8);
   static Color grey = const Color(0xFFC8C4BB);
+  static Color lightGrey = const Color(0xFFEAEAEA);
+  static Color darkGrey = const Color(0xFF898989);
   static Color black = const Color(0xFF141419);
   static Color brown = const Color(0xFF4C454B);
   static Color darkPrimary = const Color(0xFFBE9256);
