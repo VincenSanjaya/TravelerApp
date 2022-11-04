@@ -1,5 +1,6 @@
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_traveler_app/screens/flight-ticket-screen/flight-ticket-screen.dart';
 import 'package:flutter_traveler_app/utils/constant.dart';
 import 'package:gap/gap.dart';
 
@@ -23,7 +24,9 @@ class ButtonFeature extends StatelessWidget {
               color: Styles.primaryColor,
               borderRadius: BorderRadius.circular(20),
             ),
-            child: IconButton(onPressed: () {}, icon: Icon(FluentSystemIcons.ic_fluent_airplane_filled, color: Styles.white,),)
+            child: IconButton(onPressed: () {
+              Navigator.pushNamed(context, FlightTicketScreen.routeName);
+            }, icon: Icon(FluentSystemIcons.ic_fluent_airplane_filled, color: Styles.white,),)
           ),
           const Gap(18),
           Container(
