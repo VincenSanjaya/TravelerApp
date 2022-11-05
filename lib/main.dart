@@ -42,6 +42,7 @@ class MyApp extends StatelessWidget {
         initialRoute: OnBoardingScreen.routeName,
         routes: routes,
       ),
+      
     );
   }
 }
