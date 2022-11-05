@@ -5,6 +5,7 @@ import 'package:flutter_traveler_app/screens/login-screen/login-screen.dart';
 import 'package:flutter_traveler_app/screens/onboarding-screen/onboarding-screen.dart';
 import 'package:flutter_traveler_app/utils/constant.dart';
 import 'package:flutter_traveler_app/utils/routes.dart';
+import 'screens/booking-flight-screen/booking-flight-screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Nuninto',
         primaryColor: Styles.primaryColor,
       ),
+      home: BookingFlightScreen(),
     );
   }
 }
