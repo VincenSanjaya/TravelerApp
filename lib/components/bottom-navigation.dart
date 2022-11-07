@@ -39,7 +39,6 @@ class _BottomBarState extends State<BottomBar> {
         showSelectedLabels: false,
         showUnselectedLabels: false,
         selectedItemColor: Styles.darkerPrimary,
-        type: BottomNavigationBarType.fixed,
         unselectedItemColor: Styles.primaryColor,
         items: const [
           BottomNavigationBarItem(icon: Icon(FluentSystemIcons.ic_fluent_home_regular),
@@ -54,7 +53,6 @@ class _BottomBarState extends State<BottomBar> {
           BottomNavigationBarItem(icon: Icon(FluentSystemIcons.ic_fluent_person_regular),
               activeIcon: Icon(FluentSystemIcons.ic_fluent_person_filled),
               label: "Profile"),
-
         ],
       ),
     );

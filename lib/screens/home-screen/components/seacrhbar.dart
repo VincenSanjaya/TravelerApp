@@ -17,6 +17,7 @@ class Searchbar extends StatelessWidget {
             child: Stack(children: <Widget>[
               Container(
                 padding: EdgeInsets.only(
+                  top: kDefaultPadding,
                   left: kDefaultPadding,
                   right: kDefaultPadding,
                   bottom: kDefaultPadding,
