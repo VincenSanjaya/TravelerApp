@@ -43,9 +43,8 @@ dependencies:
   fluentui_icons: ^1.0.0
   get:
   gap: ^2.0.0
-  http:
   dropdown_textfield: ^1.0.6
-  sqflite:
+  loading_animation_widget:
   flutter_native_splash: ^2.2.11
   material_design_icons_flutter: ^5.0.6996
   font_awesome_flutter: ^10.2.1

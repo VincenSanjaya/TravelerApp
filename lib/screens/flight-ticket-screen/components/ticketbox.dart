@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_traveler_app/screens/booking-flight-screen/booking-flight-screen.dart';
 import 'package:flutter_traveler_app/utils/constant.dart';
 import 'package:flutter_traveler_app/utils/utils.dart';
 import 'package:dropdown_textfield/dropdown_textfield.dart';
@@ -370,7 +371,9 @@ class _TicketBoxState extends State<TicketBox> {
               width: AppLayout.getScreenWidth(),
               height: 50,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, BookingFlightScreen.routeName);
+                },
                 child: Text(
                   "Cari Tiket",
                   style: TextStyle(
@@ -710,7 +713,7 @@ class _TicketBoxState extends State<TicketBox> {
                   });
                 },
                 child: Text(
-                  "Haiii <3",
+                  "Simpan",
                   style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.w600,

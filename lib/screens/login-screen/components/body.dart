@@ -160,7 +160,7 @@ class _BodyLoginState extends State<BodyLogin> {
               SizedBox(width: 5,),
               GestureDetector(
                 onTap: () {
-                  Navigator.pushNamed(context, RegisterScreen.routeName);
+                    Navigator.pushNamed(context, RegisterScreen.routeName);
                 },
                 child: Text("Daftar", style: TextStyle(fontSize: 15, color: Styles.primaryColor, fontWeight: FontWeight.w800),),
               )
