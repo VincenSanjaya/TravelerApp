@@ -157,6 +157,16 @@ List<Map<String, dynamic>> baliDestination = [
   },
 ];
 
-// List<Image> items =[
-//   Image.asset()
-// ];
+class DataModel {
+  final String image;
+
+  DataModel(this.image);
+}
+
+List<DataModel> promoCarousel = [
+  DataModel("assets/images/image-carousel-1.png"),
+  DataModel("assets/images/image-carousel-2.png"),
+  DataModel("assets/images/image-carousel-3.png"),
+  DataModel("assets/images/image-carousel-4.png"),
+  DataModel("assets/images/image-carousel-5.png"),
+];

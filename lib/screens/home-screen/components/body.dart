@@ -3,6 +3,7 @@ import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_traveler_app/screens/home-screen/components/bali-best.dart';
 import 'package:flutter_traveler_app/screens/home-screen/components/button-feature.dart';
+import 'package:flutter_traveler_app/screens/home-screen/components/carousel-slider.dart';
 import 'package:flutter_traveler_app/screens/home-screen/components/destination.dart';
 import 'package:flutter_traveler_app/screens/home-screen/components/seacrhbar.dart';
 import 'package:flutter_traveler_app/screens/home-screen/components/ticket-view.dart';
@@ -30,9 +31,8 @@ class _BodyHomeState extends State<BodyHome> {
         children: [
           Searchbar(size: size,),
           Container(
-            margin: EdgeInsets.only(left: 20),
-            alignment: Alignment.centerLeft,
-            child: Text("Siapkan\nliburanmu sekarang!", style: TextStyle(
+            alignment: Alignment.center,
+            child: Text("Siapkan Liburanmu Sekarang!", textAlign: TextAlign.center, style: TextStyle(
               fontSize: 32,
               fontWeight: FontWeight.w800,
               color: Styles.black,
@@ -59,10 +59,12 @@ class _BodyHomeState extends State<BodyHome> {
             ),
           ),
           const Gap(20),
+          CarouselSlider(),
+          const Gap(20),
           Container(
             margin: EdgeInsets.only(left: 20),
             alignment: Alignment.centerLeft,
-            child: Text("Destinasi Terpupuler 2022", style: TextStyle(
+            child: Text("Destinasi Terpopuler 2022", style: TextStyle(
               fontSize: 16,
               fontWeight: FontWeight.w800,
               color: Styles.black,
@@ -80,7 +82,7 @@ class _BodyHomeState extends State<BodyHome> {
           Container(
             margin: EdgeInsets.only(left: 20),
             alignment: Alignment.centerLeft,
-            child: Text("Destinasi Balu Untuk Kamu", style: TextStyle(
+            child: Text("Destinasi Bali Untuk Kamu", style: TextStyle(
               fontSize: 16,
               fontWeight: FontWeight.w800,
               color: Styles.black,
