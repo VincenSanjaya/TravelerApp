@@ -14,7 +14,7 @@ class DestinationScreen extends StatelessWidget {
     final size = AppLayout.getSize(context);
     return Container(
       width: size.width * 0.6,
-      height: AppLayout.getHeight(200),
+      height: AppLayout.getHeight(160),
       margin: const EdgeInsets.only(right: 17, top: 5),
       decoration: BoxDecoration(
         color: Styles.primaryColor,
@@ -25,9 +25,9 @@ class DestinationScreen extends StatelessWidget {
         ],
       ),
       child: Stack(
-        children:[
+          children:[
             Container(
-              height: AppLayout.getHeight(200),
+              height: AppLayout.getHeight(160),
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(12),
                   color: Styles.primaryColor,
@@ -35,14 +35,14 @@ class DestinationScreen extends StatelessWidget {
                       fit: BoxFit.cover, image: NetworkImage("${destination['image']}"))),
             ),
             Container (
-              padding: const EdgeInsets.only(top: 160, left: 20),
+              padding: const EdgeInsets.only(top: 125, left: 20),
               child: Text(
                 destination['place'],
-                style: Styles.headlineStyle2.copyWith(color: Styles.white, fontSize: 24, fontWeight: FontWeight.w800),
+                style: Styles.headlineStyle2.copyWith(color: Styles.white, fontSize: 20, fontWeight: FontWeight.w800),
               ),
             )
 
-        ]
+          ]
       ),
     );
   }

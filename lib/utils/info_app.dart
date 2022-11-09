@@ -170,3 +170,57 @@ List<DataModel> promoCarousel = [
   DataModel("assets/images/image-carousel-4.png"),
   DataModel("assets/images/image-carousel-5.png"),
 ];
+
+List<String> bannerCarousel = [
+  "assets/images/banner-carousel-1.png",
+  "assets/images/banner-carousel-2.png",
+  "assets/images/banner-carousel-3.png",
+  "assets/images/banner-carousel-4.png",
+  "assets/images/banner-carousel-5.png",
+];
+
+
+List<Map<String, dynamic>> topHotel = [
+  {
+    'image': 'hotel-image-1.jpg',
+    'hotel': 'Hotel Wisata Niaga',
+    'ratings': '4.5 (8762)',
+    'price': 'Rp. 1.000.000',
+  },
+  {
+    'image': 'hotel-image-2.jpg',
+    'hotel': 'Meryln Park Hotel',
+    'ratings': '4.5 (6527)',
+    'price': 'Rp. 1.000.000',
+  },
+  {
+    'image': 'hotel-image-3.jpg',
+    'hotel': 'Verse Hotel',
+    'ratings': '4.5 (7261)',
+    'price': 'Rp. 1.000.000',
+  },
+  {
+    'image': 'hotel-image-4.jpg',
+    'hotel': 'Mercure Hotel Jakarta',
+    'ratings': '4.5 (1872)',
+    'price': 'Rp. 1.000.000',
+  },
+  {
+    'image': 'hotel-image-5.jpg',
+    'hotel': 'Horison Ultima',
+    'ratings': '4.5 (8722)',
+    'price': 'Rp. 1.000.000',
+  },
+  {
+    'image': 'hotel-image-6.jpg',
+    'hotel': 'Lumire Hotel',
+    'ratings': '4.5 (7816)',
+    'price': 'Rp. 1.000.000',
+  },
+{
+    'image': 'hotel-image-7.jpg',
+    'hotel': 'Premier The Hive',
+    'ratings': '4.5 (8162)',
+    'price': 'Rp. 1.000.000',
+  },
+];
