@@ -4,16 +4,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_traveler_app/utils/constant.dart';
 import 'package:flutter_traveler_app/utils/info_app.dart';
 
-class CarouselSlider extends StatefulWidget {
-  const CarouselSlider({Key? key}) : super(key: key);
+class SliderCarousel extends StatefulWidget {
+  const SliderCarousel({Key? key}) : super(key: key);
 
   @override
-  State<CarouselSlider> createState() => _CarouselSliderState();
+  State<SliderCarousel> createState() => _SliderCarouselState();
 }
 
-class _CarouselSliderState extends State<CarouselSlider> {
+class _SliderCarouselState extends State<SliderCarousel> {
   late PageController _pageController;
-  int _currentPage = 0;
+  int _currentPage = 2;
 
   @override
   void initState() {
