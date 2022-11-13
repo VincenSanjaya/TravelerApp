@@ -1,85 +1,49 @@
 import 'package:flutter/material.dart';
 
-List<Map<String, dynamic>> ticketList= [
+List<Map<String, dynamic>> ticketList = [
   {
-    'from': {
-      'code': 'JKT',
-      'name': 'Jakarta'
-    },
-    'to': {
-      'code': 'SBY',
-      'name': 'Surabaya'
-    },
+    'from': {'code': 'JKT', 'name': 'Jakarta'},
+    'to': {'code': 'SBY', 'name': 'Surabaya'},
     'flying_time': '3H 15M',
     'date': '4 OKT',
     'departure_time': '08.00 AM',
     'number': 13
   },
   {
-    'from': {
-      'code': 'SBY',
-      'name': 'Surabaya'
-    },
-    'to': {
-      'code': 'BLI',
-      'name': 'Bali'
-    },
+    'from': {'code': 'SBY', 'name': 'Surabaya'},
+    'to': {'code': 'BLI', 'name': 'Bali'},
     'flying_time': '2H 10M',
     'date': '10 OKT',
     'departure_time': '12.00 PM',
     'number': 21
   },
   {
-    'from': {
-      'code': 'JBR',
-      'name': 'Jember'
-    },
-    'to': {
-      'code': 'SBY',
-      'name': 'Surabaya'
-    },
+    'from': {'code': 'JBR', 'name': 'Jember'},
+    'to': {'code': 'SBY', 'name': 'Surabaya'},
     'flying_time': '0H 45M',
     'date': '10 OKT',
     'departure_time': '12.00 PM',
     'number': 32
   },
   {
-    'from': {
-      'code': 'JKT',
-      'name': 'Jakarta'
-    },
-    'to': {
-      'code': 'LBK',
-      'name': 'Lombok'
-    },
+    'from': {'code': 'JKT', 'name': 'Jakarta'},
+    'to': {'code': 'LBK', 'name': 'Lombok'},
     'flying_time': '1H 45M',
     'date': '1 NOV',
     'departure_time': '14.00 PM',
     'number': 10
   },
   {
-    'from': {
-      'code': 'JKT',
-      'name': 'Jakarta'
-    },
-    'to': {
-      'code': 'RGT',
-      'name': 'Riau'
-    },
+    'from': {'code': 'JKT', 'name': 'Jakarta'},
+    'to': {'code': 'RGT', 'name': 'Riau'},
     'flying_time': '2H 30M',
     'date': '9 NOV',
     'departure_time': '09.00 AM',
     'number': 29
   },
   {
-    'from': {
-      'code': 'MKS',
-      'name': 'Makassar'
-    },
-    'to': {
-      'code': 'JKT',
-      'name': 'Jakarta'
-    },
+    'from': {'code': 'MKS', 'name': 'Makassar'},
+    'to': {'code': 'JKT', 'name': 'Jakarta'},
     'flying_time': '1H 30M',
     'date': '10 NOV',
     'departure_time': '12.00 PM',
@@ -179,7 +143,6 @@ List<String> bannerCarousel = [
   "assets/images/banner-carousel-5.png",
 ];
 
-
 List<Map<String, dynamic>> topHotel = [
   {
     'image': 'hotel-image-1.jpg',
@@ -223,7 +186,7 @@ List<Map<String, dynamic>> topHotel = [
     'ratings': '4.4 (7816)',
     'price': 'Rp. 750.000,00',
   },
-{
+  {
     'image': 'hotel-image-7.jpg',
     'hotel': 'Premier The Hive',
     'location': 'Jakarta Timur, DKI Jakarta',
