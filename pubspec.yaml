@@ -51,6 +51,7 @@ dependencies:
   cloud_firestore: ^4.0.2
   carousel_slider: ^4.1.1
   syncfusion_flutter_datepicker: ^20.3.52
+  readmore: ^2.1.0
 
 dev_dependencies:
   flutter_test:

@@ -131,6 +131,7 @@ class _BodyHomeState extends State<BodyHome> {
               children: topHotel
                   .map((singleHotel) => TopHotel(tophotel: singleHotel))
                   .toList(),
+
             ),
           ),
         ],
