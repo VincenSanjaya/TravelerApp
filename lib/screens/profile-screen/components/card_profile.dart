@@ -28,7 +28,6 @@ class CardProfile extends StatelessWidget {
         child: InkWell(
             splashColor: Styles.primaryColor.withAlpha(70),
             onTap: () {
-              debugPrint('Card tapped.');
             },
             child: Padding(
               padding: const EdgeInsets.all(15.0),
