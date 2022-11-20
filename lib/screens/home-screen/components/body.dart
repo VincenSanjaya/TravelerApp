@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_traveler_app/screens/home-screen/components/bali-best.dart';
+import 'package:flutter_traveler_app/screens/home-screen/components/bali_best.dart';
 import 'package:flutter_traveler_app/screens/home-screen/components/button-feature.dart';
 import 'package:flutter_traveler_app/screens/home-screen/components/carousel-banner.dart';
 import 'package:flutter_traveler_app/screens/home-screen/components/carousel-slider.dart';
