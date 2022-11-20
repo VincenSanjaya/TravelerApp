@@ -9,6 +9,7 @@ import 'package:flutter_traveler_app/screens/loginorregister-screen/choose-scree
 import 'package:flutter_traveler_app/screens/notification-screen/notification-screen.dart';
 import 'package:flutter_traveler_app/screens/onboarding-screen/onboarding-screen.dart';
 import 'package:flutter_traveler_app/screens/register-screen/register-screen.dart';
+import 'package:flutter_traveler_app/screens/setting_screen/setting_screen.dart';
 
 final Map<String, WidgetBuilder> routes = {
   OnBoardingScreen.routeName: (context) => OnBoardingScreen(),
@@ -20,4 +21,5 @@ final Map<String, WidgetBuilder> routes = {
   FlightTicketScreen.routeName: (context) => FlightTicketScreen(),
   BookingFlightScreen.routeName: (context) => BookingFlightScreen(),
   HotelScreen.routeName: (context) => HotelScreen(),
+  SettingScreen.routeName: (context) => SettingScreen(),
 };

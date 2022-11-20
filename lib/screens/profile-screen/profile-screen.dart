@@ -1,6 +1,7 @@
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_traveler_app/screens/profile-screen/components/body.dart';
+import 'package:flutter_traveler_app/screens/setting_screen/setting_screen.dart';
 
 import 'package:flutter_traveler_app/utils/constant.dart';
 
@@ -26,7 +27,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
             child: Row(
               children: [
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, SettingScreen.routeName);
+                  },
                   icon: const Icon(FluentSystemIcons.ic_fluent_settings_regular),
                 ),
               ],
