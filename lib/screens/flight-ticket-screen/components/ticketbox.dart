@@ -184,7 +184,7 @@ class _TicketBoxState extends State<TicketBox> {
                   alignment: Alignment.topLeft,
                   padding: EdgeInsets.only(top: 10, left: 5),
                   height: 72,
-                  width: AppLayout.getScreenWidth() / 3 + 20,
+                  width: AppLayout.getScreenWidth() / 3,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(8),
                     border: Border.all(
@@ -249,7 +249,7 @@ class _TicketBoxState extends State<TicketBox> {
                   alignment: Alignment.topLeft,
                   padding: EdgeInsets.only(top: 10, left: 5),
                   height: 72,
-                  width: AppLayout.getScreenWidth() / 3 + 20,
+                  width: AppLayout.getScreenWidth() / 3,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(8),
                     border: Border.all(
