@@ -2,6 +2,7 @@ import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_traveler_app/screens/home-screen/home-screen.dart';
 import 'package:flutter_traveler_app/screens/profile-screen/profile-screen.dart';
+import 'package:flutter_traveler_app/screens/ticket_screen/ticket_screen.dart';
 import 'package:flutter_traveler_app/utils/constant.dart';
 
 class BottomBar extends StatefulWidget {
@@ -18,7 +19,7 @@ class _BottomBarState extends State<BottomBar> {
   static final List<Widget>_widgetOptions =<Widget> [
     const HomeScreen(),
     const Text("Search"),
-    const Text("Tickets"),
+    const TicketScreen(),
     const ProfileScreen()
   ];
 

@@ -1,5 +1,3 @@
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_traveler_app/screens/home-screen/components/bali_best.dart';
 import 'package:flutter_traveler_app/screens/home-screen/components/button-feature.dart';
@@ -13,7 +11,6 @@ import 'package:flutter_traveler_app/screens/home-screen/components/top-hotel.da
 import 'package:flutter_traveler_app/utils/constant.dart';
 import 'package:flutter_traveler_app/utils/utils.dart';
 import 'package:flutter_traveler_app/utils/info_app.dart';
-import 'package:flutter_traveler_app/utils/auth_service.dart';
 import 'package:gap/gap.dart';
 
 class BodyHome extends StatefulWidget {
