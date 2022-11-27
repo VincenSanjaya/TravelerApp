@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_traveler_app/components/bottom-navigation.dart';
 import 'package:flutter_traveler_app/screens/booking-flight-screen/booking-flight-screen.dart';
+import 'package:flutter_traveler_app/screens/finish_ticket_screen/components/ticket_detail_model.dart';
+import 'package:flutter_traveler_app/screens/finish_ticket_screen/finish_ticket_screen.dart';
 import 'package:flutter_traveler_app/screens/flight-ticket-screen/flight-ticket-screen.dart';
 import 'package:flutter_traveler_app/screens/home-screen/home-screen.dart';
 import 'package:flutter_traveler_app/screens/hotel-screen/hotel-screen.dart';
@@ -22,4 +24,6 @@ final Map<String, WidgetBuilder> routes = {
   BookingFlightScreen.routeName: (context) => BookingFlightScreen(),
   HotelScreen.routeName: (context) => HotelScreen(),
   SettingScreen.routeName: (context) => SettingScreen(),
+  FinishTicketScreen.routeName: (context) => FinishTicketScreen(),
+  TicketDetailModel.routeName: (context) => TicketDetailModel(),
 };
