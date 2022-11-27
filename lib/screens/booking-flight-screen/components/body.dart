@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_traveler_app/screens/finish_ticket_screen/finish_ticket_screen.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class BodyBookingflight extends StatefulWidget {
@@ -520,7 +521,9 @@ class _BodyBookingflightState extends State<BodyBookingflight> {
                                       borderRadius: BorderRadius.circular(8),
                                     ),
                                   ),
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.pushNamed(context, FinishTicketScreen.routeName);
+                                  },
                                   child: Text(
                                     "Lanjutkan",
                                     style: TextStyle(
