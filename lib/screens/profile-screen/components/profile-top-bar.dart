@@ -1,5 +1,6 @@
 
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_traveler_app/utils/utils.dart';
@@ -14,6 +15,7 @@ class ProfileTopBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final user = FirebaseAuth.instance.currentUser!;
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 25,),
       width: double.infinity,
@@ -39,7 +41,7 @@ class ProfileTopBar extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text("Shin Ryujin", style: Styles.headlineStyle2.copyWith(color: Styles.white, fontSize: 22, fontWeight: FontWeight.w700),),
+                  Text(user.email!, style: Styles.headlineStyle2.copyWith(color: Styles.white, fontSize: 22, fontWeight: FontWeight.w700),),
                   Text("1,000,000 Points", style: Styles.headlineStyle3.copyWith(color: Styles.white, fontSize: 18, fontWeight: FontWeight.w600),),
                   Text("0 Post", style: Styles.headlineStyle3.copyWith(color: Styles.white, fontSize: 18, fontWeight: FontWeight.w600),),
                 ],

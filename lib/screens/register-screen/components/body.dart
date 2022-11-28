@@ -1,5 +1,7 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_traveler_app/components/bottom-navigation.dart';
+import 'package:flutter_traveler_app/main.dart';
 import 'package:flutter_traveler_app/screens/home-screen/home-screen.dart';
 import 'package:flutter_traveler_app/screens/login-screen/login-screen.dart';
 import 'package:flutter_traveler_app/utils/constant.dart';
@@ -15,6 +17,16 @@ class BodyRegister extends StatefulWidget {
 }
 
 class _BodyRegisterState extends State<BodyRegister> {
+  final emailController =TextEditingController();
+  final passwordController =TextEditingController();
+
+  @override
+  void dispose() {
+    emailController.dispose();
+    passwordController.dispose();
+
+    super.dispose();
+  }
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -143,6 +155,7 @@ class _BodyRegisterState extends State<BodyRegister> {
                   height: 5,
                 ),
                 TextField(
+                  controller: emailController,
                   obscureText: false,
                   keyboardType: TextInputType.emailAddress,
                   cursorColor: Styles.primaryColor,
@@ -183,6 +196,7 @@ class _BodyRegisterState extends State<BodyRegister> {
                   height: 5,
                 ),
                 TextField(
+                  controller: passwordController,
                   obscureText: true,
                   keyboardType: TextInputType.text,
                   cursorColor: Styles.primaryColor,
@@ -208,7 +222,7 @@ class _BodyRegisterState extends State<BodyRegister> {
             margin: EdgeInsets.only(top: 50),
             child: ElevatedButton(
               onPressed: () {
-                Navigator.pushNamed(context, BottomBar.routeName);
+                signUp();
               },
               style: ButtonStyle(
                 backgroundColor: MaterialStateColor.resolveWith(
@@ -262,5 +276,16 @@ class _BodyRegisterState extends State<BodyRegister> {
         ],
       ),
     );
+  }
+  Future signUp() async {
+    showDialog(context: context, barrierDismissible:false, builder: (context) => Center(child: CircularProgressIndicator()));
+
+    try{
+      await FirebaseAuth.instance.createUserWithEmailAndPassword(email: emailController.text.trim(), password: passwordController.text.toString());
+    } on FirebaseAuthException catch (e) {
+      print (e);
+    }
+
+    navigatorKey.currentState!.popUntil((route) => route.isFirst);
   }
 }
