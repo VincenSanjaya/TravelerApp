@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_traveler_app/screens/setting_screen/components/button_setting.dart';
@@ -71,7 +72,7 @@ class _BodySettingState extends State<BodySetting> {
           const Gap(2),
           ButtonSetting(title: "Kebijakan Privasi", icon: Icon(FluentSystemIcons.ic_fluent_lock_regular), onTap: () {}),
           const Gap(15),
-          ButtonSetting(title: "Keluar", icon: Icon(FluentSystemIcons.ic_fluent_power_regular), onTap: () {}),
+          InkWell(child: ButtonSetting(title: "Keluar", icon: Icon(FluentSystemIcons.ic_fluent_power_regular), onTap: () => FirebaseAuth.instance.signOut())),
         ],
       ),
     );
