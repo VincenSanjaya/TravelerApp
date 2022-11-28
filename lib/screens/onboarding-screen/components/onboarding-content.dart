@@ -14,22 +14,22 @@ class OnBoard {
 
 final List<OnBoard> demo_data = [
   OnBoard(
-      image: "assets/images/image-1.png",
+      image: "assets/images/image 1.png",
       title: "Hi! Travelers",
       subtitle: "Selamat Datang",
       description: ""),
   OnBoard(
-      image: "assets/images/image-2.png",
+      image: "assets/images/image 2.png",
       title: "Jelajahi",
       subtitle: "INDONESIA",
       description: ""),
   OnBoard(
-      image: "assets/images/image-3.png",
+      image: "assets/images/image 3.png",
       title: "Dalam Genggaman Anda",
       subtitle: "",
       description: ""),
   OnBoard(
-      image: "assets/images/image-4.png",
+      image: "assets/images/image 4.png",
       title: "Bersama",
       subtitle: "Traveler",
       description: "good trip good mood"),
@@ -56,7 +56,7 @@ class OnBoardContent extends StatelessWidget {
             child: Stack(
               children: <Widget>[
                 Container(
-                  child: Image.asset(image, width: 844, fit: BoxFit.fitHeight),
+                  child: Image.asset(image, width: 844, fit: BoxFit.fill),
                 ),
                 Container(
                   margin: EdgeInsets.only(

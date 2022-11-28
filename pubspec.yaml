@@ -39,18 +39,20 @@ dependencies:
   cupertino_icons: ^1.0.2
   firebase_auth:
   google_sign_in:
-  firebase_core:
   flutter_bloc:
+  fluentui_icons: ^1.0.0
   get:
-  http:
-  sqflite:
-  url_launcher: ^6.1.5
-  rflutter_alert: ^2.0.2
+  gap: ^2.0.0
+  dropdown_textfield: ^1.0.6
+  loading_animation_widget:
   flutter_native_splash: ^2.2.11
-  image_picker:
   material_design_icons_flutter: ^5.0.6996
   font_awesome_flutter: ^10.2.1
   cloud_firestore: ^4.0.2
+  carousel_slider: ^4.1.1
+  syncfusion_flutter_datepicker: ^20.3.52
+  readmore: ^2.1.0
+  flutter_gif: ^0.0.4
 
 dev_dependencies:
   flutter_test:
