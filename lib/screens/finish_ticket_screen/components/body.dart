@@ -58,7 +58,7 @@ class _BodyFinishState extends State<BodyFinish> {
               ),
             ),
             Text(
-              "Rp1.500.000,00",
+              "Rp1.502.000,00",
               style: TextStyle(
                 fontSize: 30,
                 fontWeight: FontWeight.w800,
@@ -161,7 +161,7 @@ class _BodyFinishState extends State<BodyFinish> {
                   ),
                 ),
                 Container(
-                  margin: EdgeInsets.only(top: 175),
+                  margin: EdgeInsets.only(top: 175, left: AppLayout.getWidth(20), right: AppLayout.getWidth(20)),
                   height: 40,
                   width: 380,
                   decoration: BoxDecoration(

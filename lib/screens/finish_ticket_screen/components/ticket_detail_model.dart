@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_traveler_app/utils/constant.dart';
+import 'package:flutter_traveler_app/utils/utils.dart';
 import 'package:gap/gap.dart';
 
 class TicketDetailModel extends StatelessWidget {
@@ -14,7 +15,7 @@ class TicketDetailModel extends StatelessWidget {
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Container(
-          padding: const EdgeInsets.symmetric(vertical: 10),
+          padding: const EdgeInsets.symmetric(vertical: 30),
           child: Column(
             children: [
               Row(
@@ -301,8 +302,8 @@ class TicketDetailModel extends StatelessWidget {
                     ]),
                   ),
                   Positioned(
-                    top: 452.5,
-                    left: 40,
+                    top: AppLayout.getHeight(455),
+                    left: AppLayout.getWidth(19),
                     child: SizedBox(
                       height: 25,
                       width: 15,
@@ -316,8 +317,8 @@ class TicketDetailModel extends StatelessWidget {
                     ),
                   ),
                   Positioned(
-                    top: 452.5,
-                    left: 395,
+                    top: AppLayout.getHeight(455),
+                    left: AppLayout.getWidth(161),
                     child: SizedBox(
                       height: 25,
                       width: 15,
