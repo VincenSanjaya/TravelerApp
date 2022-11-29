@@ -1,5 +1,7 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_traveler_app/components/bottom-navigation.dart';
+import 'package:flutter_traveler_app/main.dart';
 import 'package:flutter_traveler_app/screens/home-screen/home-screen.dart';
 import 'package:flutter_traveler_app/screens/register-screen/register-screen.dart';
 import 'package:flutter_traveler_app/utils/auth_service.dart';
@@ -15,8 +17,19 @@ class BodyLogin extends StatefulWidget {
   @override
   State<BodyLogin> createState() => _BodyLoginState();
 }
-
 class _BodyLoginState extends State<BodyLogin> {
+
+  final emailController =TextEditingController();
+  final passwordController =TextEditingController();
+
+  @override
+  void dispose() {
+    emailController.dispose();
+    passwordController.dispose();
+
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -40,7 +53,7 @@ class _BodyLoginState extends State<BodyLogin> {
                 ElevatedButton(onPressed: () {
                   AuthService().signInWithGoogle().then((result) {
                     if (result != null) {
-                      Get.offAllNamed("/home");
+                      Get.offAll(() => BottomBar());
                     }
                   });
                 },
@@ -84,6 +97,7 @@ class _BodyLoginState extends State<BodyLogin> {
                 SizedBox(height: 5,),
 
                 TextField(
+                  controller: emailController,
                   obscureText: false,
                   keyboardType: TextInputType.emailAddress,
                   cursorColor: Styles.primaryColor,
@@ -115,6 +129,7 @@ class _BodyLoginState extends State<BodyLogin> {
                 SizedBox(height: 5,),
 
                 TextField(
+                  controller: passwordController,
                   obscureText: true,
                   keyboardType: TextInputType.text,
                   cursorColor: Styles.primaryColor,
@@ -138,7 +153,7 @@ class _BodyLoginState extends State<BodyLogin> {
             margin: EdgeInsets.only(top: 50),
             child: ElevatedButton(
               onPressed: () {
-                Navigator.pushNamed(context, BottomBar.routeName);
+                signIn();
               },
               style: ButtonStyle(
                 backgroundColor: MaterialStateColor.resolveWith((states) => Styles.primaryColor),
@@ -170,4 +185,23 @@ class _BodyLoginState extends State<BodyLogin> {
       ),
     );
   }
+  Future signIn() async {
+    showDialog(context: context, barrierDismissible: false, builder: (context) => Center(child: CircularProgressIndicator()));
+
+    try {
+      await FirebaseAuth.instance.signInWithEmailAndPassword(
+          email: emailController.text.trim(),
+          password: passwordController.text.trim());
+    } on FirebaseAuthException catch (e) {
+      if (e.code == 'user-not-found') {
+        print('No user found for that email.');
+      } else if (e.code == 'wrong-password') {
+        print('Wrong password provided for that user.');
+      }
+    }
+
+    navigatorKey.currentState!.popUntil((route) => route.isFirst);
+
+  }
+
 }

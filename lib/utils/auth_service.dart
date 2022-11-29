@@ -1,8 +1,11 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_traveler_app/components/bottom-navigation.dart';
 import 'package:flutter_traveler_app/screens/home-screen/home-screen.dart';
 import 'package:flutter_traveler_app/screens/onboarding-screen/onboarding-screen.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+
+import '../screens/login-screen/login-screen.dart';
 
 class AuthService {
   handleAuthState() {
@@ -10,9 +13,9 @@ class AuthService {
       stream: FirebaseAuth.instance.authStateChanges(),
       builder: (BuildContext context, snapshot) {
         if (snapshot.hasData) {
-          return HomeScreen();
+          return BottomBar();
         } else {
-          return const OnBoardingScreen();
+          return const LoginScreen();
         }
       },
     );
