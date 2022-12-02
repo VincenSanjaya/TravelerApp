@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
-import 'package:flutter_traveler_app/screens/flight-payment-screen/flight-payment-screen.dart';
+import 'package:flutter_traveler_app/screens/flight-payment-screen/flight_payment_screen.dart';
 import 'package:flutter_traveler_app/screens/home-screen/home-screen.dart';
 import 'package:flutter_traveler_app/screens/login-screen/components/body.dart';
 import 'package:flutter_traveler_app/screens/login-screen/login-screen.dart';

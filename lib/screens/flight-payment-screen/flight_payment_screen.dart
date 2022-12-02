@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_traveler_app/screens/flight-payment-screen/components/body.dart';
 
 class FlightPaymentScreen extends StatefulWidget {
+  static String routeName = "/flightpayment";
   const FlightPaymentScreen({super.key});
 
   @override

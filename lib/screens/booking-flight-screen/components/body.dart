@@ -1,6 +1,9 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_traveler_app/screens/finish_ticket_screen/finish_ticket_screen.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+import '../../flight-payment-screen/flight_payment_screen.dart';
 
 class BodyBookingflight extends StatefulWidget {
   const BodyBookingflight({super.key});
@@ -12,6 +15,7 @@ class BodyBookingflight extends StatefulWidget {
 class _BodyBookingflightState extends State<BodyBookingflight> {
   @override
   Widget build(BuildContext context) {
+    final user = FirebaseAuth.instance.currentUser!;
     return Container(
       child: SingleChildScrollView(
         child: Column(
@@ -194,7 +198,7 @@ class _BodyBookingflightState extends State<BodyBookingflight> {
                           Container(
                             margin: EdgeInsets.only(top: 20, left: 10),
                             child: Text(
-                              "Masuk Sebagai User",
+                              "Masuk Sebagai Vincencio",
                               style: TextStyle(
                                 fontSize: 15,
                                 color: Colors.black,
@@ -205,7 +209,7 @@ class _BodyBookingflightState extends State<BodyBookingflight> {
                           Container(
                             margin: EdgeInsets.only(top: 3, left: 10),
                             child: Text(
-                              "Alamat Email",
+                              user.email!,
                               style: TextStyle(
                                   fontSize: 15, color: Color(0xff898989)),
                             ),
@@ -262,7 +266,7 @@ class _BodyBookingflightState extends State<BodyBookingflight> {
                                   children: [
                                     Container(
                                       child: Text(
-                                        "Nama User",
+                                        "Vincencio",
                                         style: TextStyle(
                                           fontSize: 15,
                                           fontWeight: FontWeight.bold,
@@ -271,7 +275,7 @@ class _BodyBookingflightState extends State<BodyBookingflight> {
                                     ),
                                     Container(
                                       child: Text(
-                                        "Alamat Email",
+                                        user.email!,
                                         style: TextStyle(fontSize: 15),
                                       ),
                                     )
@@ -279,7 +283,7 @@ class _BodyBookingflightState extends State<BodyBookingflight> {
                                 ),
                               ),
                               Container(
-                                margin: EdgeInsets.only(left: 195),
+                                margin: EdgeInsets.only(left: 105),
                                 child: Icon(
                                   Icons.check,
                                   color: Color(0xff4CAF50),
@@ -522,7 +526,7 @@ class _BodyBookingflightState extends State<BodyBookingflight> {
                                     ),
                                   ),
                                   onPressed: () {
-                                    Navigator.pushNamed(context, FinishTicketScreen.routeName);
+                                    Navigator.pushNamed(context, FlightPaymentScreen.routeName);
                                   },
                                   child: Text(
                                     "Lanjutkan",

@@ -17,6 +17,7 @@ class BodyRegister extends StatefulWidget {
 }
 
 class _BodyRegisterState extends State<BodyRegister> {
+  final usernameController = TextEditingController();
   final emailController =TextEditingController();
   final passwordController =TextEditingController();
 
@@ -115,6 +116,7 @@ class _BodyRegisterState extends State<BodyRegister> {
                   height: 5,
                 ),
                 TextField(
+                  controller: usernameController,
                   obscureText: false,
                   keyboardType: TextInputType.text,
                   cursorColor: Styles.primaryColor,

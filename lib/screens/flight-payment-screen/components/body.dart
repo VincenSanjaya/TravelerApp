@@ -1,7 +1,8 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_traveler_app/screens/flight-payment-screen/flight-payment-screen.dart';
+import 'package:flutter_traveler_app/screens/finish_ticket_screen/finish_ticket_screen.dart';
+import 'package:flutter_traveler_app/screens/flight-payment-screen/flight_payment_screen.dart';
 import 'package:flutter_traveler_app/screens/home-screen/home-screen.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:slide_countdown/slide_countdown.dart';
@@ -131,7 +132,7 @@ class _BodyFlightPaymentState extends State<BodyFlightPayment> {
                                     Container(
                                       margin: EdgeInsets.only(top: 20),
                                       child: Text(
-                                        "BDO",
+                                        "DPS",
                                         style: TextStyle(
                                             color: Colors.white, fontSize: 20),
                                       ),
@@ -351,7 +352,7 @@ class _BodyFlightPaymentState extends State<BodyFlightPayment> {
                         Container(
                           margin: EdgeInsets.only(right: 15, top: 20),
                           child: Text(
-                            "Rp. 2.000.000",
+                            "Rp. 1.500.000",
                             style: TextStyle(
                               color: Colors.black,
                               fontSize: 15,
@@ -395,10 +396,7 @@ class _BodyFlightPaymentState extends State<BodyFlightPayment> {
                     ),
                     child: ElevatedButton(
                       onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => HomeScreen()));
+                        Navigator.pushNamed(context, FinishTicketScreen.routeName) ;
                       },
                       child: Text(
                         "Bayar Sekarang",
