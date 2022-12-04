@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_traveler_app/components/bottom-navigation.dart';
 import 'package:flutter_traveler_app/screens/home-screen/components/top-hotel.dart';
 import 'package:flutter_traveler_app/screens/hotel-screen/components/hotel-list.dart';
 import 'package:flutter_traveler_app/utils/constant.dart';
@@ -24,7 +25,7 @@ class _BodyHotelState extends State<BodyHotel> {
           Container(
             alignment: Alignment.centerLeft,
             child: IconButton(onPressed: () {
-              Navigator.pop(context);
+              Navigator.pushNamed(context, BottomBar.routeName);
             }, icon: const Icon(Icons.arrow_back_ios)),
           ),
           const Gap(15),

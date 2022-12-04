@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_traveler_app/screens/home-screen/components/carousel-banner.dart';
+import 'package:flutter_traveler_app/screens/hotel-payment-screen/hotel_payment_screen.dart';
+import 'package:flutter_traveler_app/screens/hotel-screen/components/hotel-list.dart';
+import 'package:flutter_traveler_app/screens/hotel-screen/hotel-screen.dart';
 import 'package:flutter_traveler_app/utils/constant.dart';
 import 'package:flutter_traveler_app/utils/utils.dart';
 import 'package:readmore/readmore.dart';
@@ -46,7 +49,7 @@ class _BodyHotelDetailState extends State<BodyHotelDetail> {
                         margin: EdgeInsets.only(top: 50, left: 25),
                         alignment: Alignment.centerLeft,
                         child: Text(
-                          "Hotel Name",
+                          "The Apruva Kempinski Bali",
                           style: TextStyle(
                             fontSize: 25,
                             fontWeight: FontWeight.w700,
@@ -58,7 +61,7 @@ class _BodyHotelDetailState extends State<BodyHotelDetail> {
                         alignment: Alignment.centerLeft,
                         margin: EdgeInsets.only(left: 25),
                         child: Text(
-                          "Hotel Adress",
+                          "Nusa Dua, Bali",
                           style: TextStyle(
                             fontSize: 15,
                             fontWeight: FontWeight.w600,
@@ -70,7 +73,7 @@ class _BodyHotelDetailState extends State<BodyHotelDetail> {
                         margin: EdgeInsets.only(top: 20, left: 25),
                         alignment: Alignment.centerLeft,
                         child: Text(
-                          "3.5 Star Hotel",
+                          "4.7 Star Hotel",
                           style: TextStyle(
                             fontSize: 15,
                             fontWeight: FontWeight.w600,
@@ -109,11 +112,14 @@ class _BodyHotelDetailState extends State<BodyHotelDetail> {
                     ],
                   ),
                 ),
-                Container(
-                  margin: EdgeInsets.only(left: 10, top: 15),
-                  child: IconButton(onPressed: () {
-                    Navigator.pop(context);
-                  }, icon: Icon(Icons.arrow_back_ios, color: Styles.white,)),
+                Positioned(
+top: 50,
+left: 20,
+                  child: Container(
+                    child: IconButton(onPressed: () {
+                      Navigator.pushNamed(context, HotelScreen.routeName);
+                    }, icon: Icon(Icons.arrow_back_ios, color: Styles.white,)),
+                  ),
                 )
               ],
             ),
@@ -132,7 +138,7 @@ class _BodyHotelDetailState extends State<BodyHotelDetail> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            "Rp 540.000,00",
+                            "Rp 4.410.000,00",
                             style: TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.w700,
@@ -154,7 +160,9 @@ class _BodyHotelDetailState extends State<BodyHotelDetail> {
                     Container(
                       margin: EdgeInsets.only(right: 20),
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushNamed(context, HotelPaymentScreen.routeName);
+                        },
                         child: Text(
                           "Pesan Kamar",
                           style: TextStyle(
